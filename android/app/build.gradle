@@ -98,7 +98,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.innostaxboilerplate"
+        applicationId "com.innostax.boilerplate"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1

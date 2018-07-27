@@ -1,4 +1,4 @@
-package com.innostaxboilerplate;
+package com.innostax.boilerplate;
 
 import com.facebook.react.ReactActivity;
 

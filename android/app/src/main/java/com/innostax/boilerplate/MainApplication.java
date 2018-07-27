@@ -1,4 +1,4 @@
-package com.innostaxboilerplate;
+package com.innostax.boilerplate;
 
 import android.app.Application;
 
