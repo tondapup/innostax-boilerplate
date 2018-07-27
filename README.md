@@ -65,3 +65,17 @@ The `.env` file is ignored by git keeping those secrets out of your repo.
 2. Add your config variables
 3. Follow instructions at [https://github.com/luggit/react-native-config#setup](https://github.com/luggit/react-native-config#setup)
 4. Done!
+<!-- Auth0 Test -->
+<!-- const auth0 = new Auth0({ domain: 'innostax-boilerplate.auth0.com', clientId: 'qPU-RPN-GS2pdBs04TQhEVcvH88QqKq3' });
+    auth0.webAuth
+    .authorize({
+      scope: "openid profile",
+      audience: 'https://innostax-boilerplate.auth0.com/userinfo'
+    })
+    .then(credentials => {
+      alert(credentials.accessToken);
+    })
+    .catch(error => {
+      console.log(error)
+      alert(JSON.stringify(error))
+    }) -->
