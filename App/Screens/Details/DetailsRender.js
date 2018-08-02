@@ -6,7 +6,7 @@ import Header from '../../Components/CustomHeader'
 const DetailsRender = ({ goToScreen }) => {
   return (
     <Container>
-      <Header title={"Details"} />
+      <Header title={"Details"} shouldHideBackButton={true}/>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Details!</Text>
       </View>

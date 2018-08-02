@@ -6,9 +6,9 @@ import Header from '../../Components/CustomHeader'
 const HomeRender = ({ goToScreen }) => {
   return (
     <Container>
-      <Header 
-        // customLeftButton={<TouchableOpacity><Icon name="arrow-back" style={{color:"white"}}/></TouchableOpacity>} 
-        title={'Home'} />
+      <Header  
+        title={'Home'}
+        shouldHideBackButton={true} />
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Home Screen!</Text>
       </View>

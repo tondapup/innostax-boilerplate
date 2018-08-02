@@ -6,7 +6,7 @@ import Header from '../../Components/CustomHeader'
 const SettingsRender = ({ goToScreen }) => {
   return (
     <Container>
-      <Header title={"Settings"} />
+      <Header title={"Settings"} shouldHideBackButton={true}/>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Settings Screen!</Text>
       </View>

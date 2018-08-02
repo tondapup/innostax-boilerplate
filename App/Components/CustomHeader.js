@@ -15,12 +15,14 @@ export default class CustomHeader extends Component {
     }
 
     render() {
-        const { title, customLeftButton, customRightButton, style } = this.props;
+        const { title, shouldHideBackButton, customRightButton, goBack, style } = this.props;
         return (
             <View>
                 <Header style={{ ...style }}>
                     <Left style={{flex:0.2}}>
-                        {customLeftButton}
+                        {shouldHideBackButton ? null : <Button transparent onPress={() => goBack()}>
+                        <Icon name="ios-arrow-back" style={{color:'white'}} />
+                    </Button>}
                     </Left>
                     <Body style={{flex:0.6, alignItems:'center'}}>
                         <Text style={{color:"white"}}>{title}</Text>
