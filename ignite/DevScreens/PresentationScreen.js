@@ -10,12 +10,26 @@ import DeviceInfoScreen from './DeviceInfoScreen'
 import PluginExamplesScreen from './PluginExamplesScreen'
 import ThemeScreen from './ThemeScreen'
 import FaqScreen from './FaqScreen'
+import PushNotification from 'react-native-push-notification'
 
 // Styles
 import styles from './Styles/PresentationScreenStyles'
 
 class PresentationScreen extends React.Component {
   openComponents = () => {
+   let notifPayload = {
+      foreground: false, // BOOLEAN: If the notification was received in foreground or not
+      userInteraction: false, // BOOLEAN: If the notification was opened by the user from the notification area or not
+      message: 'My Notification Message', // STRING: The notification message
+      data: {}, // OBJECT: The push data
+  }
+
+  PushNotification.localNotificationSchedule({
+    //... You can use all the options from localNotifications
+    message: "My Notification Message", // (required)
+    date: new Date(Date.now() + (5 * 1000)) // in 5 secs
+  });
+
     this.props.navigation.navigate('ComponentExamplesScreen')
   }
 

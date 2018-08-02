@@ -3,6 +3,7 @@ package com.innostax.boilerplate;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.invertase.firebase.RNFirebasePackage;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.auth0.react.A0Auth0Package;
@@ -28,6 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFirebasePackage(),
             new ReactNativePushNotificationPackage(),
             new ReactNativeConfigPackage(),
             new A0Auth0Package(),
