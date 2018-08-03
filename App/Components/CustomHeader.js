@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions, View, TouchableOpacity } from 'react-native'
+import { Dimensions, View, TouchableOpacity, Platform } from 'react-native'
 import { Text, Header, Icon, Left, Body, Right, Button } from 'native-base'
 import * as commonConstants from '../Constants'
 
@@ -25,7 +25,7 @@ export default class CustomHeader extends Component {
                     </Button>}
                     </Left>
                     <Body style={{flex:0.6, alignItems:'center'}}>
-                        <Text style={{color:"white"}}>{title}</Text>
+                        <Text style={{color: Platform.OS === commonConstants.ANDROID_PLATFORM ? "white" : "black"}}>{title}</Text>
                     </Body>
                     <Right style={{flex:0.2}}>
                         {customRightButton}
