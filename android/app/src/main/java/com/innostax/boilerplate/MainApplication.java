@@ -13,6 +13,8 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.slowpath.hockeyapp.RNHockeyAppModule;
+import com.slowpath.hockeyapp.RNHockeyAppPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,7 +36,8 @@ public class MainApplication extends Application implements ReactApplication {
             new ReactNativeConfigPackage(),
             new A0Auth0Package(),
             new VectorIconsPackage(),
-            new RNDeviceInfo()
+            new RNDeviceInfo(),
+            new RNHockeyAppPackage(MainApplication.this)
       );
     }
 
