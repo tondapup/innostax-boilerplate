@@ -18,14 +18,14 @@ export default class CustomHeader extends Component {
         const { title, shouldHideBackButton, customRightButton, goBack, style } = this.props;
         return (
             <View>
-                <Header style={{ ...style }}>
+                <Header androidStatusBarColor="black" style={{ backgroundColor:"#F7F7F7", ...style }}>
                     <Left style={{flex:0.2}}>
                         {shouldHideBackButton ? null : <Button transparent onPress={() => goBack()}>
                         <Icon name="ios-arrow-back" style={{color:'white'}} />
                     </Button>}
                     </Left>
                     <Body style={{flex:0.6, alignItems:'center'}}>
-                        <Text style={{color: Platform.OS === commonConstants.ANDROID_PLATFORM ? "white" : "black"}}>{title}</Text>
+                        <Text style={{color: "black"}}>{title}</Text>
                     </Body>
                     <Right style={{flex:0.2}}>
                         {customRightButton}
