@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { View, TouchableOpacity } from 'react-native'
 import { Container, Text, Icon } from "native-base";
 import Header from '../../Components/CustomHeader'
+import styles from './styles'
 
 const HomeRender = ({ goToScreen }) => {
   return (
@@ -9,7 +10,7 @@ const HomeRender = ({ goToScreen }) => {
       <Header  
         title={'Home'}
         shouldHideBackButton={true} />
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <View style={styles.View}>
         <Text>Home Screen!</Text>
       </View>
     </Container>
