@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -38,6 +37,8 @@
 		E85596DAD95A497FBE9E43F1 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C01D9201F7492198ECB096 /* libReactNativeConfig.a */; };
 		FB7E88D1943644EF86BA313D /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E5A562EF6294B6884573C03 /* FontAwesome.ttf */; };
 		FF36D9D6D5EE4AC996DA928C /* libRCTOneSignal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 788EB6DC09454C8AA4931F62 /* libRCTOneSignal.a */; };
+		33C4D4E3E51743089FBBB805 /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFFED24907F48AC977011B1 /* libCodePush.a */; };
+		188F2771D4F64E82A9D260A5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF254802E554A1888F26217 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -382,6 +383,9 @@
 		EA11025254504DA39DE366B9 /* libA0Auth0.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libA0Auth0.a; sourceTree = "<group>"; };
 		EA67221D21141D1500A1E2B5 /* InnostaxBoilerplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = InnostaxBoilerplate.entitlements; path = InnostaxBoilerplate/InnostaxBoilerplate.entitlements; sourceTree = "<group>"; };
 		FD88E66E0BC1446D84C82C44 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
+		D660452DA8964C14929D92EB /* CodePush.xcodeproj */ = {isa = PBXFileReference; name = "CodePush.xcodeproj"; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		1AFFED24907F48AC977011B1 /* libCodePush.a */ = {isa = PBXFileReference; name = "libCodePush.a"; path = "libCodePush.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		CFF254802E554A1888F26217 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,6 +411,8 @@
 				A18E765877FF4A6EAC8E4216 /* libA0Auth0.a in Frameworks */,
 				E85596DAD95A497FBE9E43F1 /* libReactNativeConfig.a in Frameworks */,
 				FF36D9D6D5EE4AC996DA928C /* libRCTOneSignal.a in Frameworks */,
+				33C4D4E3E51743089FBBB805 /* libCodePush.a in Frameworks */,
+				188F2771D4F64E82A9D260A5 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +540,7 @@
 			isa = PBXGroup;
 			children = (
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				CFF254802E554A1888F26217 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -593,6 +600,7 @@
 				862B0E7DFFEC4F4EAD4A002D /* A0Auth0.xcodeproj */,
 				DDED713221D1470488C14C75 /* ReactNativeConfig.xcodeproj */,
 				388EBB7B65834DD485474C28 /* RCTOneSignal.xcodeproj */,
+				D660452DA8964C14929D92EB /* CodePush.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1200,6 +1208,7 @@
 					"$(SRCROOT)/../node_modules/react-native-auth0/ios",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 				);
 				INFOPLIST_FILE = InnostaxBoilerplate/Info.plist;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-traditional";
@@ -1216,6 +1225,10 @@
 				PROVISIONING_PROFILE = "29b12714-4486-455f-b6c1-711ba73c60cf";
 				PROVISIONING_PROFILE_SPECIFIER = InnostaxBoilerplateXcodeTest;
 				VERSIONING_SYSTEM = "apple-generic";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/InnostaxBoilerplate\"",
+				);
 			};
 			name = Debug;
 		};
@@ -1234,6 +1247,7 @@
 					"$(SRCROOT)/../node_modules/react-native-auth0/ios",
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
 				);
 				INFOPLIST_FILE = InnostaxBoilerplate/Info.plist;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-traditional";
@@ -1250,6 +1264,10 @@
 				PROVISIONING_PROFILE = "29b12714-4486-455f-b6c1-711ba73c60cf";
 				PROVISIONING_PROFILE_SPECIFIER = InnostaxBoilerplateXcodeTest;
 				VERSIONING_SYSTEM = "apple-generic";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/InnostaxBoilerplate\"",
+				);
 			};
 			name = Release;
 		};
